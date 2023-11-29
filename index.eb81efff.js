@@ -745,13 +745,7 @@ var resizeCanvas = function() {
     ctx.scale(devicePixelRatio, devicePixelRatio);
 };
 let canvasNeedsResize = (e)=>{
-    if (!window.screenApi[1]) canvasIsResized = false;
-    else {
-        resizeCanvas();
-        setTimeout(()=>{
-            handleEvent(e);
-        }, 100);
-    }
+    canvasIsResized = false;
 };
 async function initBackground() {
     resizeCanvas();
@@ -2176,3 +2170,4 @@ module.exports = {
 };
 
 },{}]},["jfKCT","6zGYw"], "6zGYw", "parcelRequiree644")
+
